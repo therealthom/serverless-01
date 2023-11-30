@@ -1,0 +1,18 @@
+name: task-manager-api
+runtime: python
+
+# Configuración de recursos, ajusta según tus necesidades
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    cpu: 500m
+    memory: 256Mi
+
+# Configura las rutas de HTTP
+triggers:
+  - type: http
+    source: /tasks
+  - type: http
+    source: /task
